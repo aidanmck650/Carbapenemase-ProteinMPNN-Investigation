@@ -1,0 +1,10 @@
+parm ./input/system.parm7
+trajin ./input/prod.nc 1 5000 1
+
+strip :WAT,Cl-,Na+
+strip !@N,CA,C,O,CB
+autoimage
+
+trajout ./output/pdb_frames/frame pdb multi pdb nobox
+
+go
